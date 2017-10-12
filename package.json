@@ -1,0 +1,32 @@
+{
+  "name": "vers",
+  "version": "1.0.0",
+  "description": "What versions you on?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vers": "./vers"
+  },
+  "author": "olizilla",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "explain-error": "^1.0.4",
+    "find-versions": "^2.0.0",
+    "reify": "^0.12.3",
+    "scuttlebot": "^10.4.6",
+    "ssb-about": "^0.1.0",
+    "ssb-backlinks": "^0.4.0",
+    "ssb-client": "^4.5.1",
+    "ssb-config": "^2.2.0",
+    "ssb-friends": "^2.2.3",
+    "ssb-keys": "^7.0.10",
+    "ssb-private": "^0.1.2",
+    "ssb-query": "^0.1.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
