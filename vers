@@ -1,3 +1,9 @@
 #!/usr/bin/env node
-require('./index')()
+const vers = require('./index')
+const cmd = process.argv[2] || 'show'
 
+if (cmd) {
+  vers[cmd]()
+} else {
+  vers()
+}
