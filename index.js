@@ -4,6 +4,7 @@ const asyncMap = require('async/map')
 const explain = require('explain-error')
 const columnify = require('columnify')
 const pull = require('pull-stream')
+const initSbot = require('./lib/sbot')
 
 module.exports.show = function show () {
   // squirt to the console
@@ -105,15 +106,4 @@ function scrapeVersions (cb) {
 
 function getUsername () {
   return require('os').userInfo().username
-}
-
-require('reify')
-const {createSbot, createSsbConfig} = require('./lib/sbot')
-const Config = require('./lib/config').default
-
-function initSbot (cb) {
-  createSsbConfig(Config.appName, { config: Config.ssb }, (err, ssbConfig) => {
-    if (err) throw explain(err)
-    createSbot(ssbConfig, cb)
-  })
 }
